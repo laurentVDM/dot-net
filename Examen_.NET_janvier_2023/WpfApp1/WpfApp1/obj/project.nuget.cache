@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xRi/mNKB5pVrInbSNJwjwrh2TGKhUn0CaSnqNWpoBXKCX8aFobJuSOy7Mo4bzw63HCn4h64wLeIGlXihIqkTiA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vande\\Documents\\ipl\\2023-2024\\Exams_janvier_2024\\.net\\Examen_.NET_janvier_2023\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vande\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\vande\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\vande\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\vande\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

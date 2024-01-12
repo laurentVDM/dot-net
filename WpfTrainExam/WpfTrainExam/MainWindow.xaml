@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfTrainExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTrainExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Key="listTemplate">
+            <StackPanel Margin="0 5 0 5">
+                <Label Content="{Binding ProductId}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="{Binding ProductName}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ComboBox
+            ItemsSource="{Binding ProductsList}"
+            ItemTemplate="{StaticResource listTemplate}"
+            SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+            HorizontalAlignment="Left" Margin="65,23,0,0" VerticalAlignment="Top" Width="184" Height="63"/>
+
+        <StackPanel HorizontalAlignment="Left" Margin="65,23,0,0" Height="63" Width="284">
+            <TextBlock>
+                <Run Text="ProductId: "/>
+                <Run Text="{Binding SelectedProduct.ProductId}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="ProductName: "/>
+                <Run Text="{Binding SelectedProduct.ProductName}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Category: "/>
+                <Run Text="{Binding SelectedProduct.Category}" />
+            </TextBlock>
+            <TextBlock>
+                <Run Text="ContactName: "/>
+                <Run Text="{Binding SelectedProduct.Supplier.ContactName}" />
+            </TextBlock>
+        </StackPanel>
+        
+        <Button Content="Discontinue Product" HorizontalAlignment="Left" Margin="65,334,0,0" VerticalAlignment="Top" Width="184" Command="{Binding DiscontinueCommand}"/>
+
+        <DataGrid
+            ItemsSource="{Binding CountryProductCounts}"
+            AutoGenerateColumns="True"
+            HorizontalAlignment="Left" Margin="400,23,0,0" VerticalAlignment="Top" Height="200" Width="300"/>
+    </Grid>
+</Window>
